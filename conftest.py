@@ -27,7 +27,6 @@ def driver():
 
 @pytest.fixture(scope="function")
 def driver_logado(driver):
-    """Fixture que já entrega o driver com login feito."""
     driver.get(BASE_URL)
     driver.find_element("id", "user-name").send_keys("standard_user")
     driver.find_element("id", "password").send_keys("secret_sauce")

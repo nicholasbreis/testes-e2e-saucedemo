@@ -2,7 +2,6 @@ from pages.login_page import LoginPage
 
 
 def test_login_valido_redireciona_para_produtos(driver):
-    """Cenário positivo: login com credenciais válidas deve ir para a página de produtos."""
     page = LoginPage(driver)
     page.abrir()
     page.fazer_login("standard_user", "secret_sauce")
@@ -12,7 +11,6 @@ def test_login_valido_redireciona_para_produtos(driver):
 
 
 def test_login_usuario_bloqueado_exibe_erro(driver):
-    """Cenário negativo: usuário bloqueado deve ver mensagem de erro."""
     page = LoginPage(driver)
     page.abrir()
     page.fazer_login("locked_out_user", "secret_sauce")
@@ -24,7 +22,6 @@ def test_login_usuario_bloqueado_exibe_erro(driver):
 
 
 def test_login_campos_vazios_exibe_erro(driver):
-    """Cenário negativo: submeter login vazio deve exibir mensagem de erro."""
     page = LoginPage(driver)
     page.abrir()
     page.clicar_login()

@@ -3,7 +3,6 @@ from pages.checkout_page import CheckoutPage
 
 
 def test_checkout_sem_dados_exibe_erro(driver_logado):
-    """Cenário negativo: tentar continuar o checkout sem preencher dados deve exibir erro."""
     produtos = ProdutosPage(driver_logado)
     checkout = CheckoutPage(driver_logado)
 
