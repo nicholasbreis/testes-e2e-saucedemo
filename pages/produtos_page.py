@@ -21,10 +21,6 @@ class ProdutosPage:
         elementos = self.driver.find_elements(By.CLASS_NAME, "inventory_item_price")
         return [float(e.text.replace("$", "")) for e in elementos]
 
-    def nomes_listados(self):
-        elementos = self.driver.find_elements(By.CLASS_NAME, "inventory_item_name")
-        return [e.text for e in elementos]
-
     def adicionar_primeiro_produto(self):
         botao = self.wait.until(
             EC.presence_of_element_located((By.ID, "add-to-cart-sauce-labs-backpack"))
